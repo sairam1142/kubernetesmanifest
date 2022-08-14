@@ -1,0 +1,24 @@
+first deploy with out liveness and readiness probe 
+
+ kubectl exec <anypod> rm webapps/java-web-app.war
+  intentially deleting to see practically liveness probe and readiness probe 
+
+  kubectl get ep 
+ 
+ curl -L custerIP
+sometimes respond will not get
+
+now deploy with liveness probe and readiness probe 
+kubectl exec <anypod> rm webapps/java-web-app.war
+ kubectl get ep
+ now you will get one less end point for some time then again livenessprobe will 
+ restart container again the ep become same
+
+ curl -L custerIP
+all times respond will,  get not responding 
+application(traffic not accepting container end point removed)
+
+
+
+
+
