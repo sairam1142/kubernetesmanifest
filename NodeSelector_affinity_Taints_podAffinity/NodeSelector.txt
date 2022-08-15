@@ -1,0 +1,16 @@
+#NodeSelector 
+to schedule the pod to particular node we have to create labeles to NodeSelector
+to know the labels of node 
+# kubectl get nodes --show-labels
+       or
+# kubectl describe node <nodename>
+
+#kubectl label nodes <nodeNmme> <label-key>=<label-value>
+ex kubectl label nodes ip-172.56.78.43 name=workerOne
+key and value case sensitive
+
+to remove the label from node 
+#kubectl label noades <nodeName> <key>-
+ex: kubectl label nodes ip-172.56.78.43 name-
+
+
